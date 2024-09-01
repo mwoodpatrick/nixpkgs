@@ -7,7 +7,7 @@
 }:
 
 let
-  version = "0.17.0";
+  version = "0.18.0";
   gitSrc = fetchFromGitHub {
     owner = "glasskube";
     repo = "glasskube";
