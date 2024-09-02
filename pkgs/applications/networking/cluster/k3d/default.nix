@@ -15,7 +15,7 @@ let
 in
 buildGoModule rec {
   pname = "k3d";
-  version = "5.7.3";
+  version = "5.6.3";
 
   src = fetchFromGitHub {
     owner = "k3d-io";
