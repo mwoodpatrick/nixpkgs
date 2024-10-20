@@ -6,14 +6,14 @@
 
 python3.pkgs.buildPythonApplication rec {
   pname = "ldeep";
-  version = "1.0.65";
+  version = "1.0.72";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "franc-pentest";
     repo = "ldeep";
     rev = "refs/tags/${version}";
-    hash = "sha256-SbsHc6gSHPmtDWHR+fJAcvWZMxae/Ufc4XB6cvoPTbE=";
+    hash = "sha256-WfrQd0P1TegeIwxQVycgx2n+IxqnKLRF1wxzNnjHaEo=";
   };
 
   pythonRelaxDeps = [

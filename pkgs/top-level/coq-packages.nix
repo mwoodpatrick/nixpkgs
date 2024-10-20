@@ -1,4 +1,4 @@
-{ lib, stdenv, fetchzip
+{ lib, stdenv, fetchurl, fetchzip
 , callPackage, newScope, recurseIntoAttrs, ocamlPackages_4_05, ocamlPackages_4_09
 , ocamlPackages_4_10, ocamlPackages_4_12, ocamlPackages_4_14
 , fetchpatch, makeWrapper, coq2html
@@ -11,7 +11,7 @@ let
       coqPackages = self // { __attrsFailEvaluation = true; recurseForDerivations = false; };
 
       metaFetch = import ../build-support/coq/meta-fetch/default.nix
-        {inherit lib stdenv fetchzip; };
+        {inherit lib stdenv fetchzip fetchurl; };
       mkCoqDerivation = lib.makeOverridable (callPackage ../build-support/coq {});
 
       contribs = recurseIntoAttrs
@@ -57,6 +57,7 @@ let
       coqprime = callPackage ../development/coq-modules/coqprime {};
       coqtail-math = callPackage ../development/coq-modules/coqtail-math {};
       coquelicot = callPackage ../development/coq-modules/coquelicot {};
+      coqutil = callPackage ../development/coq-modules/coqutil {};
       corn = callPackage ../development/coq-modules/corn {};
       deriving = callPackage ../development/coq-modules/deriving {};
       dpdgraph = callPackage ../development/coq-modules/dpdgraph {};
@@ -126,6 +127,7 @@ let
       reglang = callPackage ../development/coq-modules/reglang {};
       relation-algebra = callPackage ../development/coq-modules/relation-algebra {};
       rewriter = callPackage ../development/coq-modules/rewriter {};
+      RustExtraction = callPackage ../development/coq-modules/RustExtraction {};
       semantics = callPackage ../development/coq-modules/semantics {};
       serapi = callPackage ../development/coq-modules/serapi {};
       simple-io = callPackage ../development/coq-modules/simple-io { };

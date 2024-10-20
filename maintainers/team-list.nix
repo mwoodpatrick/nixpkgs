@@ -278,7 +278,11 @@ with lib.maintainers;
   };
 
   emacs = {
-    members = [ adisbladis ];
+    members = [
+      AndersonTorres
+      adisbladis
+      linj
+    ];
     scope = "Maintain the Emacs editor and packages.";
     shortName = "Emacs";
   };
@@ -495,7 +499,6 @@ with lib.maintainers;
       ryantm
       lassulus
       yayayayaka
-      asymmetric
     ];
     scope = "Maintain Jitsi.";
     shortName = "Jitsi";
@@ -565,6 +568,7 @@ with lib.maintainers;
   linux-kernel = {
     members = [
       TredwellGit
+      k900
       ma27
       nequissimus
       qyliss
@@ -742,6 +746,16 @@ with lib.maintainers;
     scope = "Maintain the Nixpkgs module system.";
     shortName = "Module system";
     enableFeatureFreezePing = true;
+  };
+
+  ngi = {
+    members = [
+      eljamm
+      fricklerhandwerk
+      wegank
+    ];
+    scope = "Maintain NGI-supported software.";
+    shortName = "NGI";
   };
 
   node = {
@@ -1019,6 +1033,19 @@ with lib.maintainers;
     ];
     scope = "Group registration for WDZ GmbH team members who collectively maintain packages.";
     shortName = "WDZ GmbH";
+  };
+
+  xen = {
+    members = [
+      hehongbo
+      lach
+      rane
+      sigmasquadron
+    ];
+    scope = "Maintain the Xen Project Hypervisor and the related tooling ecosystem.";
+    shortName = "Xen Project Hypervisor";
+    enableFeatureFreezePing = true;
+    githubTeams = [ "xen-project" ];
   };
 
   xfce = {
